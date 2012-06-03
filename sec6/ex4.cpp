@@ -7,7 +7,7 @@ struct Name_value {
     typedef struct _name_eq {
         string s;
         _name_eq(string s) : s(s) {}
-        bool operator()(Name_value &nv) {
+        bool operator()(const Name_value &nv) const {
             return s == nv.name;
         }
     } name_eq;
